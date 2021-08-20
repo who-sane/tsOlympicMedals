@@ -1,3 +1,4 @@
+// Wasn't signed in during task and had to copy accross from old file after fork!!
 
 import './style.css';
 import { Country } from './models/Country'
@@ -90,11 +91,13 @@ function displayTable() {
     let row = document.createElement('tr');
 
     let country = document.createElement('td');
+
     let Countriess = document.createTextNode(countries[i].name);
     country.appendChild(Countriess);
     row.appendChild(country);
 
     let gold = document.createElement('td');
+
     let g1 = document.createTextNode(
       String(countries[i].totalMedalType(Medals['Gold']))
     );
@@ -102,6 +105,7 @@ function displayTable() {
     row.appendChild(gold);
 
     let silver = document.createElement('td');
+
     let s1 = document.createTextNode(
       String(countries[i].totalMedalType(Medals['Silver']))
     );
@@ -109,6 +113,7 @@ function displayTable() {
     row.appendChild(silver);
 
     let bronze = document.createElement('td');
+
     let b1 = document.createTextNode(
       String(countries[i].totalMedalType(Medals['Bronze']))
     );
@@ -116,9 +121,12 @@ function displayTable() {
     row.appendChild(bronze);
 
     let total = document.createElement('td');
+
     let totaltext = document.createTextNode(String(countries[i].totalMedals()));
-    total.appendChild(totaltext);
-    row.appendChild(total);
+
+      total.appendChild(totaltext);
+
+      row.appendChild(total);
 
     newBody.appendChild(row);
   }
